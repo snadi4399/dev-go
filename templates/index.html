@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cities</title>
+</head>
+<body>
+    <h1>City List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Temperature Unit</th>
+                <th>Latest Temperature</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{.CityName}}</td>
+                <td>{{.Latitude}}</td>
+                <td>{{.Longitude}}</td>
+                <td>{{.TemperatureUnit}}</td>
+                <td>{{.LatestTemperature}}</td>
+                <td>
+                    <a href="/cities/{{.CityID}}">View</a> |
+                    <a href="/cities/{{.CityID}}/edit">Edit</a>
+                </td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+</html>
