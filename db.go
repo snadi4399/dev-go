@@ -35,6 +35,15 @@ func getAllCities() []City {
 	return cities
 }
 
+//	func getCityByID(cityID string) City {
+//		var city City
+//		err := db.QueryRow("SELECT city_id, city_name, latitude, longitude, temperature_unit, latest_temperature FROM cities WHERE city_id = ?", cityID).Scan(
+//			&city.CityID, &city.CityName, &city.Latitude, &city.Longitude, &city.TemperatureUnit, &city.LatestTemperature)
+//		if err != nil {
+//			log.Fatal(err)
+//		}
+//		return city
+//
 // Fetch a city by ID
 func getCityByID(cityID string) City {
 	var city City
